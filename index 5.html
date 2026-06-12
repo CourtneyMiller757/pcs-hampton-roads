@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCS to Hampton Roads | Your VA Loan Expert</title>
+  <meta name="description" content="PCSing to Hampton Roads? Courtney Miller is a military-specialist real estate agent serving all 7 cities. VA loan expert. Zero out-of-pocket options available." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1B2A4A;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --cream: #FAF8F3;
+      --white: #FFFFFF;
+      --gray: #6B7280;
+      --light-gray: #F3F4F6;
+      --text: #1F2937;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2C3E6B 100%);
+      color: var(--white);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--white); }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      flex-wrap: wrap;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.3rem;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .section-body {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 620px;
+    }
+
+    /* WHY COURTNEY */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .why-card {
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+      padding: 1.75rem;
+      border-radius: 0 6px 6px 0;
+    }
+    .why-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .why-card p { font-size: 0.95rem; color: var(--gray); line-height: 1.65; }
+
+    /* CITIES */
+    .cities-section { background: var(--navy); color: var(--white); }
+    .cities-section .section-title { color: var(--white); }
+    .cities-section .section-body { color: rgba(255,255,255,0.65); }
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .city-pill {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* VA LOAN */
+    .va-section { background: var(--cream); }
+    .va-list {
+      list-style: none;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .va-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .va-list li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial-section { background: var(--white); }
+    .testimonial-card {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2.5rem;
+      border-radius: 8px;
+      max-width: 700px;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem;
+      color: var(--gold);
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      line-height: 1;
+      opacity: 0.5;
+    }
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      padding-top: 1.5rem;
+    }
+    .testimonial-author {
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* AGENT BIO */
+    .bio-section { background: var(--light-gray); }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .bio-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 3px solid var(--gold);
+    }
+    .bio-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .bio-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .bio-title { font-size: 0.85rem; color: var(--gold); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+    .bio-text { font-size: 0.97rem; color: var(--gray); line-height: 1.7; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--navy);
+      font-weight: 900;
+      margin-bottom: 0.75rem;
+    }
+    .cta-banner p { color: var(--navy); opacity: 0.75; margin-bottom: 2rem; font-size: 1.05rem; }
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.9rem 2.25rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-dark:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--gold-light); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .bio-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">PCS to Hampton Roads</a>
+    <div style="display:flex; gap:0.75rem; align-items:center;">
+      <a href="https://www.rein.com/Default.aspx" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.75); font-size:0.9rem; text-decoration:none;">Search Homes</a>
+      <a href="tour.html" class="nav-cta">Schedule a Tour</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">VA Loan Specialist · Hampton Roads</div>
+      <h1>Your PCS to <span>Hampton Roads</span> Starts Here</h1>
+      <p class="hero-sub">From Newport News to Virginia Beach — I know every ZIP code, every base, and every VA loan rule. Let's get you home before your report date.</p>
+      <div class="hero-buttons">
+        <a href="tour.html" class="btn-primary">Schedule a Home Tour</a>
+        <a href="https://www.rein.com/Default.aspx" target="_blank" rel="noopener" class="btn-secondary">Search Homes</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">9+</span>
+          <div class="stat-label">Years in Hampton Roads</div>
+        </div>
+        <div>
+          <span class="stat-num">7</span>
+          <div class="stat-label">Cities Covered</div>
+        </div>
+        <div>
+          <span class="stat-num">$0</span>
+          <div class="stat-label">Down Payment Options</div>
+        </div>
+        <div>
+          <span class="stat-num">61+</span>
+          <div class="stat-label">Five-Star Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY COURTNEY -->
+  <section id="why">
+    <div class="container">
+      <div class="section-label">Why Work With Me</div>
+      <h2 class="section-title">A Real Estate Agent Who Speaks Military</h2>
+      <p class="section-body">PCS season is stressful enough. You need someone who already knows the drill — not someone learning it alongside you.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>VA Loan Expertise</h3>
+          <p>I've closed dozens of VA loans. I know what sellers need to hear, which inspections are required, and how to negotiate your closing costs down to zero.</p>
+        </div>
+        <div class="why-card">
+          <h3>Remote-Friendly Process</h3>
+          <p>Still stationed elsewhere? No problem. I do virtual tours, handle paperwork remotely, and keep you updated at every step so you can buy before you arrive.</p>
+        </div>
+        <div class="why-card">
+          <h3>All 7 Cities, One Agent</h3>
+          <p>Whether you're reporting to Langley-Eustis, Norfolk Naval Station, or any other installation — I cover every city so you can live where you want, not where you're limited.</p>
+        </div>
+        <div class="why-card">
+          <h3>PCS Timeline Specialist</h3>
+          <p>I understand BAH, I understand report dates, and I understand the urgency. We'll move as fast as your orders require.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITIES -->
+  <section class="cities-section">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold);">Coverage Area</div>
+      <h2 class="section-title">All of Hampton Roads</h2>
+      <p class="section-body">Seven independent cities, one region — and I know all of them. Whether you want waterfront, suburban, or close to base, I'll find the right fit.</p>
+      <div class="cities-grid">
+        <div class="city-pill">Newport News</div>
+        <div class="city-pill">Hampton</div>
+        <div class="city-pill">Virginia Beach</div>
+        <div class="city-pill">Norfolk</div>
+        <div class="city-pill">Chesapeake</div>
+        <div class="city-pill">Suffolk</div>
+        <div class="city-pill">Williamsburg Area</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VA LOAN -->
+  <section class="va-section">
+    <div class="container">
+      <div class="section-label">VA Loan Benefits</div>
+      <h2 class="section-title">Make the Most of Your VA Benefit</h2>
+      <p class="section-body">Your VA loan benefit is one of the most powerful tools available to you. Here's what it can do when you work with an agent who knows how to use it.</p>
+      <ul class="va-list">
+        <li>No down payment required in most cases</li>
+        <li>No private mortgage insurance (PMI)</li>
+        <li>Competitive interest rates</li>
+        <li>Seller can pay all closing costs</li>
+        <li>No prepayment penalty</li>
+        <li>Reusable — use your benefit more than once</li>
+        <li>Assumable loan option for future buyers</li>
+        <li>Available for active duty, veterans, and surviving spouses</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="section-label">What Clients Say</div>
+      <h2 class="section-title">61+ Five-Star Reviews</h2>
+      <div class="testimonial-card" style="margin-top: 2rem;">
+        <p class="testimonial-text">Courtney made our PCS move so much less stressful. She knew exactly what we needed as a military family, handled everything remotely while we were still stationed in Germany, and we closed before our report date. We couldn't have done it without her.</p>
+        <div class="testimonial-author">— Military Family, PCS from Germany to Hampton Roads</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio-section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-avatar"><img src="headshot.jpg" alt="Courtney Miller, REALTOR" /></div>
+        <div>
+          <div class="bio-name">Courtney Miller</div>
+          <div class="bio-title">REALTOR® · Cova Home Realty · VA Loan Specialist</div>
+          <p class="bio-text">With nearly a decade of experience in Hampton Roads real estate, I've helped hundreds of military families navigate PCS moves, VA loans, and everything in between. I'm based in Newport News and know this market inside and out — from the neighborhoods near Langley-Eustis to the waterfront communities of Virginia Beach. My job is to make your move feel manageable, not overwhelming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Ready to Find Your Hampton Roads Home?</h2>
+    <p>Schedule a free consultation — virtual or in-person. Let's get ahead of your PCS timeline.</p>
+    <a href="tour.html" class="btn-dark">Schedule a Tour →</a>
+  </div>
+
+  <footer>
+    <p>Courtney Miller · REALTOR® · Cova Home Realty · Hampton Roads, VA</p>
+    <p style="margin-top:0.5rem;"><a href="mailto:cmiller.varealty@gmail.com">cmiller.varealty@gmail.com</a></p>
+    <p style="margin-top:0.75rem; font-size:0.8rem;">© 2025 Courtney Miller. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
